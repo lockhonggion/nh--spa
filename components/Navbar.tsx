@@ -29,23 +29,25 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4'
-      }`}
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          
+
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <a href="#home" className="flex flex-col">
-              <span className={`font-serif text-2xl font-bold tracking-wider ${scrolled ? 'text-spa-dark' : 'text-spa-dark lg:text-white'}`}>
-                NHẸ SPA
-              </span>
-              <span className={`text-xs uppercase tracking-widest ${scrolled ? 'text-spa-green' : 'text-spa-green lg:text-stone-200'}`}>
-                {t('nav.no_tip')}
-              </span>
+          <div className="flex-shrink-0 flex items-center gap-3">
+            <a href="#home" className="flex items-center gap-2">
+              <img src="/logo.png" alt="Nhẹ Spa Logo" className="h-12 w-auto" />
+              <div className="flex flex-col">
+                <span className={`font-serif text-2xl font-bold tracking-wider ${scrolled ? 'text-spa-dark' : 'text-spa-dark lg:text-white'}`}>
+                  NHẸ SPA
+                </span>
+                <span className={`text-xs uppercase tracking-widest ${scrolled ? 'text-spa-green' : 'text-spa-green lg:text-stone-200'}`}>
+                  {t('nav.no_tip')}
+                </span>
+              </div>
             </a>
           </div>
 
@@ -55,39 +57,38 @@ const Navbar: React.FC = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className={`font-sans text-sm font-medium hover:text-spa-brown transition-colors uppercase tracking-wide ${
-                    scrolled ? 'text-spa-dark' : 'text-white shadow-black drop-shadow-md'
-                }`}
+                className={`font-sans text-sm font-medium hover:text-spa-brown transition-colors uppercase tracking-wide ${scrolled ? 'text-spa-dark' : 'text-white shadow-black drop-shadow-md'
+                  }`}
               >
                 {link.name}
               </a>
             ))}
-            
-            <button 
-                onClick={toggleLanguage}
-                className={`flex items-center font-medium text-sm px-2 py-1 rounded transition-colors ${scrolled ? 'text-spa-dark hover:bg-spa-beige' : 'text-white hover:bg-white/20'}`}
+
+            <button
+              onClick={toggleLanguage}
+              className={`flex items-center font-medium text-sm px-2 py-1 rounded transition-colors ${scrolled ? 'text-spa-dark hover:bg-spa-beige' : 'text-white hover:bg-white/20'}`}
             >
-                <Globe className="w-4 h-4 mr-1" />
-                {language === 'vi' ? 'EN' : 'VI'}
+              <Globe className="w-4 h-4 mr-1" />
+              {language === 'vi' ? 'EN' : 'VI'}
             </button>
 
-            <a 
-                href={`tel:${BUSINESS_INFO.phone}`}
-                className="flex items-center px-4 py-2 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-spa-brown hover:bg-spa-dark transition-colors"
+            <a
+              href={`tel:${BUSINESS_INFO.phone}`}
+              className="flex items-center px-4 py-2 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-spa-brown hover:bg-spa-dark transition-colors"
             >
-                <Phone className="w-4 h-4 mr-2" />
-                {t('nav.book')}
+              <Phone className="w-4 h-4 mr-2" />
+              {t('nav.book')}
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
-            <button 
-                onClick={toggleLanguage}
-                className={`flex items-center font-medium text-sm px-2 py-1 rounded ${scrolled ? 'text-spa-dark' : 'text-spa-dark'}`}
+            <button
+              onClick={toggleLanguage}
+              className={`flex items-center font-medium text-sm px-2 py-1 rounded ${scrolled ? 'text-spa-dark' : 'text-spa-dark'}`}
             >
-                <Globe className="w-5 h-5 mr-1" />
-                {language === 'vi' ? 'EN' : 'VI'}
+              <Globe className="w-5 h-5 mr-1" />
+              {language === 'vi' ? 'EN' : 'VI'}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -112,11 +113,11 @@ const Navbar: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <a 
-             href={`tel:${BUSINESS_INFO.phone}`}
-             className="block w-full text-center mt-4 px-4 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-spa-green hover:bg-spa-dark"
+          <a
+            href={`tel:${BUSINESS_INFO.phone}`}
+            className="block w-full text-center mt-4 px-4 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-spa-green hover:bg-spa-dark"
           >
-             {t('nav.call_book')} {BUSINESS_INFO.displayPhone}
+            {t('nav.call_book')} {BUSINESS_INFO.displayPhone}
           </a>
         </div>
       </div>
