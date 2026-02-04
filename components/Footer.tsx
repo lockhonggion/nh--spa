@@ -26,11 +26,11 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-serif font-bold mb-6 text-spa-beige">{t('footer.quick_links')}</h3>
             <ul className="space-y-3 text-gray-300 text-sm">
-              <li><a href="#home" className="hover:text-white transition-colors">{t('nav.home')}</a></li>
-              <li><a href="#about" className="hover:text-white transition-colors">{t('nav.about')}</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">{t('nav.services')}</a></li>
-              <li><a href="#reviews" className="hover:text-white transition-colors">{t('nav.reviews')}</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">{t('nav.book')}</a></li>
+              <li><a href="#home" className="hover:text-white transition-all duration-300 hover:translate-x-2 inline-block">{t('nav.home')}</a></li>
+              <li><a href="#about" className="hover:text-white transition-all duration-300 hover:translate-x-2 inline-block">{t('nav.about')}</a></li>
+              <li><a href="#services" className="hover:text-white transition-all duration-300 hover:translate-x-2 inline-block">{t('nav.services')}</a></li>
+              <li><a href="#reviews" className="hover:text-white transition-all duration-300 hover:translate-x-2 inline-block">{t('nav.reviews')}</a></li>
+              <li><a href="#contact" className="hover:text-white transition-all duration-300 hover:translate-x-2 inline-block">{t('nav.book')}</a></li>
             </ul>
           </div>
 
@@ -49,10 +49,10 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="mt-8 flex space-x-4">
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-spa-green transition-colors">
+              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-spa-green hover:scale-110 transition-all duration-300">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-spa-green transition-colors">
+              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-spa-green hover:scale-110 transition-all duration-300">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>

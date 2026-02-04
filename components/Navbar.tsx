@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className={`font-sans text-sm font-medium hover:text-spa-brown transition-colors uppercase tracking-wide ${scrolled ? 'text-spa-dark' : 'text-white shadow-black drop-shadow-md'
+                className={`font-sans text-sm font-medium transition-all duration-300 uppercase tracking-wide hover:-translate-y-0.5 ${scrolled ? 'text-spa-dark hover:text-spa-green' : 'text-white hover:text-spa-beige shadow-black drop-shadow-md'
                   }`}
               >
                 {link.name}
